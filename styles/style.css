@@ -1,0 +1,304 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+.complete_section {
+  position: absolute;
+  align-items: center;
+  width: 100%;
+  max-width: 23.75rem;
+}
+.complete_section img {
+  width: 5rem;
+}
+.complete_section h1 {
+  margin-top: 1.875rem;
+  text-transform: uppercase;
+  color: hsl(278deg, 68%, 11%);
+}
+.complete_section #added_card_details_text {
+  color: hsl(279deg, 6%, 55%);
+}
+.complete_section button {
+  width: 100%;
+}
+
+.left_section {
+  display: flex;
+  position: relative;
+}
+.left_section picture {
+  width: 100%;
+}
+.left_section #bg_desktop {
+  height: 100%;
+  max-height: 50rem;
+}
+.left_section .card_front {
+  color: #fff;
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  transform: translate(0, 0);
+  display: flex;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  flex-direction: column;
+}
+.left_section .card_front #logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(30%, 50%);
+}
+.left_section .card_front .cardholder_example {
+  width: 100%;
+}
+.left_section .card_front #exp_date_example {
+  width: 100%;
+  height: 100%;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: right;
+}
+.left_section .card_front .card_number_example {
+  width: 100%;
+  position: absolute;
+  top: 45%;
+  left: -3%;
+  transform: translate(9%, 50%);
+}
+.left_section .card_front .cardholder_and_exp_date_example {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 1.5625rem;
+  padding-right: 1.5625rem;
+  top: 75%;
+  left: 0;
+  transform: translate(0%, 50%);
+  width: 100%;
+}
+.left_section .card_back {
+  color: #fff;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  display: flex;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.left_section .card_back .cvc_example {
+  position: absolute;
+  top: 40%;
+  right: 12%;
+  transform: translate(-10%, 50%);
+}
+
+@media only screen and (max-width: 1349px) {
+  .bg_image {
+    width: 100%;
+  }
+  #card_front_div {
+    width: 100%;
+    height: 90%;
+    scale: 0.8;
+    top: 40%;
+    left: -5%;
+    transform: translate(0, 0);
+    z-index: 2;
+  }
+  #card_back_div {
+    width: 100%;
+    height: 100%;
+    scale: 0.6;
+    top: -5%;
+    left: 5%;
+  }
+  #card_back_div .cvc_example {
+    scale: 1.3;
+    top: 42%;
+    right: -5%;
+    transform: translate(0%, 50%);
+  }
+}
+@media screen and (max-width: 400px) {
+  #card_back_div #cvc_example {
+    scale: 1.2;
+    top: 38%;
+    right: -5%;
+    transform: translate(0%, 50%);
+  }
+}
+@media screen and (max-width: 300px) {
+  #card_front_div #logo {
+    scale: 0.8;
+  }
+  #card_front_div .card_number_example {
+    scale: 0.8;
+    left: -5%;
+  }
+  #card_front_div .cardholder_and_exp_date_example {
+    scale: 0.9;
+    left: -1%;
+    top: 70%;
+    justify-content: space-between;
+  }
+}
+.right_section, .complete_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 14.375rem;
+}
+.right_section p, .complete_section p {
+  font-size: 0.9375rem;
+  margin-top: 0.9375rem;
+  text-transform: uppercase;
+  color: hsl(278deg, 68%, 11%);
+}
+.right_section .error, .complete_section .error {
+  color: red;
+  font-size: 0.7rem;
+  display: none;
+}
+.right_section .error-empty .empty, .complete_section .error-empty .empty {
+  display: block;
+}
+.right_section .error-invalid .invalid, .complete_section .error-invalid .invalid {
+  display: block;
+}
+.right_section input, .complete_section input {
+  width: 100%;
+  margin-top: 0.4375rem;
+  padding: 0.625rem;
+  border-radius: 0.3125rem;
+  border: 0.0625rem solid hsl(270deg, 3%, 87%);
+  cursor: pointer;
+}
+.right_section input:focus, .complete_section input:focus, .right_section input:focus {
+  outline: hsl(249deg, 99%, 64%) 0.0625rem solid;
+}
+.right_section input::-webkit-input-placeholder, .complete_section input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: hsl(279deg, 6%, 55%);
+}
+.right_section input::-moz-placeholder, .complete_section input::-moz-placeholder { /* Firefox 19+ */
+  color: hsl(279deg, 6%, 55%);
+}
+.right_section input:-ms-input-placeholder, .complete_section input:-ms-input-placeholder { /* IE 10+ */
+  color: hsl(279deg, 6%, 55%);
+}
+.right_section input:-moz-placeholder, .complete_section input:-moz-placeholder { /* Firefox 18- */
+  color: hsl(279deg, 6%, 55%);
+}
+.right_section .exp_date_div, .complete_section .exp_date_div {
+  max-width: 11.875rem;
+  width: 100%;
+}
+.right_section .exp_date_div input, .complete_section .exp_date_div input {
+  max-width: 4.375rem;
+  width: 100%;
+  margin-right: 0.625rem;
+}
+.right_section .cvc_div, .complete_section .cvc_div {
+  width: 90%;
+  margin-left: 0.5rem;
+}
+.right_section .exp_date_and_cvc, .complete_section .exp_date_and_cvc {
+  display: flex;
+}
+.right_section button, .complete_section button {
+  width: 100%;
+  margin-top: 1.875rem;
+  padding: 0.625rem;
+  font-size: 1.0625rem;
+  color: #fff;
+  background-color: hsl(278deg, 68%, 11%);
+  border-radius: 0.3125rem;
+  border: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 360px) {
+  .right_section p, .complete_section p {
+    font-size: 0.8125rem;
+  }
+  .right_section .exp_date_div label, .complete_section .exp_date_div label {
+    width: 100%;
+  }
+  .right_section .exp_date_div input, .complete_section .exp_date_div input {
+    max-width: 4.375rem;
+    width: 40%;
+    margin-right: 10px;
+  }
+  .right_section .cvc_div, .complete_section .cvc_div {
+    width: 75%;
+  }
+}
+@media only screen and (min-width: 500px) {
+  .right_section, .complete_section {
+    padding-top: 3.125rem;
+  }
+}
+@media only screen and (max-width: 1349px) {
+  .right_section, .complete_section {
+    margin-top: 3.125rem;
+    padding-left: 1.375rem;
+    padding-right: 1.375rem;
+    padding-bottom: 1.5625rem;
+  }
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+main {
+  max-width: 90rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.complete_section {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.25rem;
+  display: none;
+}
+
+@media only screen and (max-width: 1349px) {
+  main {
+    margin-top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  section {
+    max-width: 37.5rem;
+    width: 100%;
+  }
+  .right_section, .complete_section {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (max-width: 400px) {
+  main {
+    font-size: 0.8125rem;
+  }
+}/*# sourceMappingURL=style.css.map */

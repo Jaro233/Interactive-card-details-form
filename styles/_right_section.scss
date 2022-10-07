@@ -1,0 +1,143 @@
+@import "./variables";
+
+
+.right_section {
+    // font-size: 1.125rem;
+    display: flex;
+    flex-direction: column;
+
+    
+    justify-content: center;
+    margin-right: 14.375rem;
+    // justify-self: center;
+    p {
+        font-size: 0.9375rem;
+        margin-top: 0.9375rem;
+        text-transform: uppercase;
+        color: $purpleCol;
+    }
+    
+
+    .error {
+        color: red;
+        font-size: .7rem;
+        display: none;
+    }
+      
+    .error-empty .empty {
+        display: block;
+    }
+      
+    .error-invalid .invalid {
+        display: block;
+    }
+
+
+    input {
+        width: 100%;
+        margin-top: 0.4375rem;
+        padding: 0.625rem;
+        border-radius: 0.3125rem;
+        border: 0.0625rem solid $lightTextCol;
+        // -webkit-box-shadow: none;
+        cursor: pointer;
+
+        
+        // &:hover {
+        //     border: 0.0625rem solid $activeBorder;
+        // }
+
+        &:focus, &:focus{
+            outline: $activeBorder 0.0625rem solid;
+        }
+
+        &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            color: $darkerTextCol;
+          }
+          &::-moz-placeholder { /* Firefox 19+ */
+            color: $darkerTextCol;
+          }
+          &:-ms-input-placeholder { /* IE 10+ */
+            color: $darkerTextCol;
+          }
+          &:-moz-placeholder { /* Firefox 18- */
+            color: $darkerTextCol;
+          }
+    }
+
+    .exp_date_div {
+        max-width: 11.875rem;
+        width: 100%;
+
+        input {
+            max-width: 4.375rem;
+            width: 100%;
+            margin-right: 0.625rem;
+        }
+    }
+
+    .cvc_div {
+        // width: 11.25rem;
+        width: 90%;
+        margin-left: 0.5rem;
+    }
+
+    .exp_date_and_cvc {
+        display: flex;
+        // justify-content: space-evenly;
+    }
+    
+
+    button {
+        width: 100%;
+        margin-top: 1.875rem;
+        padding: 0.625rem;
+        font-size: 1.0625rem;
+        color: #fff;
+        background-color: $purpleCol;
+        border-radius: 0.3125rem;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .right_section {
+        p {
+            font-size: 0.8125rem;
+        }
+        
+        .exp_date_div {
+            // width: 70%;
+            // max-width: 200px
+            label {
+                width: 100%;
+                // scale: 0.8;
+            }
+            input {
+                max-width: 4.375rem;
+                width: 40%;
+                margin-right: 10px;
+            }
+        }
+        .cvc_div {
+            width: 75%;
+        }
+    }
+    
+}
+
+@media only screen and (min-width: 500px) {
+    .right_section {
+        padding-top: 3.125rem;
+    }
+}
+
+@media only screen and (max-width: 1349px) {
+    .right_section {
+        margin-top: 3.125rem;
+        padding-left: 1.375rem;
+        padding-right: 1.375rem;
+        padding-bottom: 1.5625rem;
+    }
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles/style.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="left_section">
+      <picture>
+        <source id="bg_mobile" media="(max-width: 1349px)" srcset="./images/bg-main-mobile.png">
+        <source id="bg_desktop" media="(min-width: 1350px)" srcset="./images/bg-main-desktop.png">
+        <img class="bg_image" src="OtherImage.png" alt="IfItDoesntMatchAnyMedia">
+      </picture>
+      <!-- <img id="bg_desktop" src="./images/bg-main-desktop.png" alt="bg-desktop"> -->
+      <div class="card_front" id="card_front_div">
+        <img id="card_front" src="./images/bg-card-front.png" alt="card-front">
+        <img id="logo" src="./images/card-logo.svg" alt="logo">
+        <h1 class="card_number_example">0000 0000 0000 0000</h1>
+        <div class="cardholder_and_exp_date_example">
+          <p class="cardholder_example">Jane Appleseed</p>
+          <div id="exp_date_example">
+            <p class="exp_date_example_MM">00</p>
+            <p class="slash">/</p>
+            <p class="exp_date_example_YY">00</p>
+          </div>
+          
+        </div>
+      </div>
+      <div class="card_back" id="card_back_div">
+        <img id="card_back" src="./images/bg-card-back.png" alt="card-back">
+        <p class="cvc_example" id="cvc_example">000</p>
+      </div>
+    </section>
+    <section class="right_section" id="">
+      <form>
+        <label for="cardholder_input" class="cardholder_name">
+          <p class="cardholder_name">Cardholder Name</p>
+        </label>
+        <input type="text" name="cardholder" class="cardholder_input" id="cardholder_input" placeholder="e.g. Jane Appleseed" maxlength="25" oninput="typing1()">
+        <p class="error empty">Can't be blank</p>
+        <p class="error invalid">Wrong format, letters only</p>
+
+        <label for="cardnumber_input" class="cardnumber">
+          <p class="cardnumber_input">Card Number</p>
+        </label>
+        <input type="text" name="cardnumber" id="cardnumber_input" placeholder="e.g. 1234 5678 9123 0000" minlength="16" maxlength="16" oninput="typing2()">
+        <p class="error empty">Can't be blank</p>
+        <p class="error invalid">Wrong format, letters only</p>
+
+        <div class="exp_date_and_cvc">
+          <div class="exp_date_div">
+            <label for="exp_date_input" class="exp_date_and_cvc">
+              <p class="exp_date_input">Exp. Date (MM/YY)</p>
+            </label>
+            <input type="text" name="exp_date" class="date exp_date_MM_input" id="exp_date_input" placeholder="MM" maxlength="2" oninput="typing3()">
+            <input type="text" name="exp_date" class="date exp_date_YY_input" id="exp_date_input" placeholder="YY" maxlength="2" oninput="typing4()">
+            <p class="error empty">Can't be blank</p>
+            <p class="error invalid">Wrong format, letters only</p>
+          </div>
+          <div class="cvc_div">
+            <label for="cvc_input" class="exp_date_and_cvc">
+              <p class="cvc_input">CVC</p>
+            </label>
+            <input type="text" name="cvc" id="cvc_input" placeholder="e.g. 123" minlength="3" maxlength="4" oninput="typing5()">
+            <p class="error empty">Can't be blank</p>
+            <p class="error invalid">Wrong format, letters only</p>
+          </div>
+        </div>
+        <button type="submit" class="confirm_btn">Confirm</button>
+      </form>
+    </section>
+    <section class="complete_section" >
+      <img src="./images/icon-complete.svg" alt="complete" class="complete_img">
+      <h1 class="thank_you_text">
+        Thank you!
+      </h1>
+      <p class="added_card_details_text" id="added_card_details_text">
+        We've added your card details
+      </p>
+      <button class="continue_btn">Continue</button>
+    </section>
+  </main>
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  <script src="script.js"></script>
+</body>
+</html>
