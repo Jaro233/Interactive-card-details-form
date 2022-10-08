@@ -3,7 +3,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
 .complete_section {
-  position: absolute;
   align-items: center;
   width: 100%;
   max-width: 23.75rem;
@@ -169,6 +168,9 @@
 }
 .right_section .error-invalid .invalid, .complete_section .error-invalid .invalid {
   display: block;
+}
+.right_section .redBorder, .complete_section .redBorder {
+  border: 0.0625rem solid hsl(0deg, 100%, 66%);
 }
 .right_section input, .complete_section input {
   width: 100%;

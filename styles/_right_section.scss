@@ -32,6 +32,10 @@
         display: block;
     }
 
+    .redBorder {
+        border: 0.0625rem solid hsl(0, 100%, 66%);
+    }
+
 
     input {
         width: 100%;

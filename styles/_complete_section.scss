@@ -1,16 +1,10 @@
 @import "./variables";
 
-#absolute {
-    position: relative;
-}
-
 
 .complete_section {
     @extend .right_section;
-    
+
     align-items: center;
-    
-    // width: 25%;
     width: 100%;
     max-width: 23.75rem;
     img {

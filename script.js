@@ -1,8 +1,17 @@
+
+
 const cardholder = document.getElementById("cardholder_input");
 const cardnumber = document.getElementById("cardnumber_input");
 const exp_date_MM = document.querySelector(".exp_date_MM_input");
 const exp_date_YY = document.querySelector(".exp_date_YY_input");
 const cvc = document.getElementById("cvc_input");
+
+
+
+
+// cardnumber.addEventListener('input', function (e) {
+//   e.target.value = e.target.value.replace(/[^\d]/g, '').replace(/(.{4})/g, '$1 ').trim();
+// });
 
 const cardholder_example = document.querySelector(".cardholder_example");
 const cardnumber_example = document.querySelector(".card_number_example");
@@ -67,12 +76,15 @@ form.addEventListener('submit', (e) => {
     if (input.value === '') {
       input.parentElement.classList.add('error-empty');
       input.parentElement.classList.remove('error-invalid');
+      input.classList.add("redBorder")
     } else if (input.value !== '' && input.value.match(/^[0-9]+$/) !== null) {
       input.parentElement.classList.remove('error-empty');
       input.parentElement.classList.add('error-invalid');
+      input.classList.add("redBorder")
     } else {
       input.parentElement.classList.remove('error-empty');
       input.parentElement.classList.remove('error-invalid');
+      input.classList.remove("redBorder")
     }
   }
   
@@ -80,12 +92,15 @@ form.addEventListener('submit', (e) => {
     if (input.value === '') {
       input.parentElement.parentElement.classList.add('error-empty');
       input.parentElement.parentElement.classList.remove('error-invalid');
+      input.classList.add("redBorder")
     } else if (input.value !== '' && input.value.match(/^[0-9]+$/) === null) { // wil return null if value has anything accept number
       input.parentElement.parentElement.classList.remove('error-empty');
       input.parentElement.parentElement.classList.add('error-invalid');
+      input.classList.add("redBorder")
     } else {
       input.parentElement.parentElement.classList.remove('error-empty');
       input.parentElement.parentElement.classList.remove('error-invalid');
+      input.classList.remove("redBorder")
     }
   }
   
@@ -93,12 +108,15 @@ form.addEventListener('submit', (e) => {
     if (input.value === '') {
       input.parentElement.classList.add('error-empty');
       input.parentElement.classList.remove('error-invalid');
+      input.classList.add("redBorder")
     } else if (input.value !== '' && input.value.match(/^[0-9]+$/) === null) {
       input.parentElement.classList.remove('error-empty');
       input.parentElement.classList.add('error-invalid');
+      input.classList.add("redBorder")
     } else {
       input.parentElement.classList.remove('error-empty');
       input.parentElement.classList.remove('error-invalid');
+      input.classList.remove("redBorder")
     }
   }
   

@@ -44,19 +44,24 @@
     </section>
     <section class="right_section" id="">
       <form>
-        <label for="cardholder_input" class="cardholder_name">
-          <p class="cardholder_name">Cardholder Name</p>
-        </label>
-        <input type="text" name="cardholder" class="cardholder_input" id="cardholder_input" placeholder="e.g. Jane Appleseed" maxlength="25" oninput="typing1()">
-        <p class="error empty">Can't be blank</p>
-        <p class="error invalid">Wrong format, letters only</p>
-
-        <label for="cardnumber_input" class="cardnumber">
-          <p class="cardnumber_input">Card Number</p>
-        </label>
-        <input type="text" name="cardnumber" id="cardnumber_input" placeholder="e.g. 1234 5678 9123 0000" minlength="16" maxlength="16" oninput="typing2()">
-        <p class="error empty">Can't be blank</p>
-        <p class="error invalid">Wrong format, letters only</p>
+        <div class="input-field">
+          <label for="cardholder_input" class="cardholder_name">
+            <p class="cardholder_name">Cardholder Name</p>
+          </label>
+          <input type="text" name="cardholder" class="cardholder_input" id="cardholder_input" placeholder="e.g. Jane Appleseed" maxlength="25" oninput="typing1()">
+          <p class="error empty">Can't be blank</p>
+          <p class="error invalid">Wrong format, letters only</p>
+        </div>
+        
+        <div class="input-field">
+          <label for="cardnumber_input" class="cardnumber">
+            <p class="cardnumber_input">Card Number</p>
+          </label>
+          <input type="text" name="cardnumber" id="cardnumber_input" placeholder="e.g. 1234 5678 9123 0000" minlength="16" maxlength="16" oninput="typing2()">
+          <p class="error empty">Can't be blank</p>
+          <p class="error invalid">Wrong format, numbers only</p>
+        </div>
+        
 
         <div class="exp_date_and_cvc">
           <div class="exp_date_div">
@@ -66,7 +71,7 @@
             <input type="text" name="exp_date" class="date exp_date_MM_input" id="exp_date_input" placeholder="MM" maxlength="2" oninput="typing3()">
             <input type="text" name="exp_date" class="date exp_date_YY_input" id="exp_date_input" placeholder="YY" maxlength="2" oninput="typing4()">
             <p class="error empty">Can't be blank</p>
-            <p class="error invalid">Wrong format, letters only</p>
+            <p class="error invalid">Wrong format, numbers only</p>
           </div>
           <div class="cvc_div">
             <label for="cvc_input" class="exp_date_and_cvc">
@@ -74,13 +79,13 @@
             </label>
             <input type="text" name="cvc" id="cvc_input" placeholder="e.g. 123" minlength="3" maxlength="4" oninput="typing5()">
             <p class="error empty">Can't be blank</p>
-            <p class="error invalid">Wrong format, letters only</p>
+            <p class="error invalid">Wrong format, numbers only</p>
           </div>
         </div>
         <button type="submit" class="confirm_btn">Confirm</button>
       </form>
     </section>
-    <section class="complete_section" >
+    <section class="complete_section" id="hidden">
       <img src="./images/icon-complete.svg" alt="complete" class="complete_img">
       <h1 class="thank_you_text">
         Thank you!
