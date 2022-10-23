@@ -7,9 +7,14 @@
     picture {
         width: 100%;
     }
+    
     #bg_desktop {
         height: 100%;
-        max-height: 50rem;
+        // max-height: 50rem;
+    }
+
+    .bg_image {
+        height: 100%;
     }
 
     .card_front {
@@ -44,6 +49,7 @@
 
         .card_number_example {
             width: 100%;
+            letter-spacing: 0.1875rem;
             position: absolute;
             top: 45%;  
             left: -3%; 
@@ -81,25 +87,97 @@
     }
 }
 
+@media only screen and (max-width: 1330px) {
+    .left_section {
+        .card_front {
+            scale: 0.9;
+            left: 5%;
+        }
+    
+        .card_back {
+            scale: 0.9;
+            left: 20%;
+        }
+    }
+   
+}
 
 
-@media only screen and (max-width: 1349px) {
+@media only screen and (max-width: 1000px) {
+    .left_section {
+        .card_front {
+            scale: 0.8;
+            left: 5%;
+        }
+    
+        .card_back {
+            scale: 0.8;
+            left: 20%;
+        }
+    }
+   
+}
+
+@media only screen and (min-width: 769px) and (max-width: 900px) {
+    .left_section {
+        .card_front {
+            scale: 0.7;
+            left: -6%;
+        }
+    
+        .card_back {
+            scale: 0.7;
+            left: 3%;
+        }
+    }
+   
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1050px) {
+    .left_section {
+        .bg_image{
+            width: 80%;
+            height: 100%;
+        }
+    }
+
+    // .left_section {
+    //     .card_front {
+    //         scale: 0.8;
+    //         left: 5%;
+    //     }
+    
+    //     .card_back {
+    //         scale: 0.6;
+    //         left: 20%;
+    //     }
+    // }
+    
+}
+
+
+
+@media only screen and (max-width: 768px) {
     // #bg_mobile {
     //     width: 100%;
     //     max-width: 400px;
     // }
-
-    .bg_image{
-        width: 100%;
+    .left_section {
+        .bg_image{
+            width: 100%;
+            height: 80%;
+        }
     }
+
+    
 
     #card_front_div {
         // display: none;
-        width: 100%;
-        height: 90%;
+        width: 80%;
+        height: 70%;
         scale: 0.8;
         top: 40%;  
-        left: -5%; 
+        left: 0%; 
         transform: translate(0, 0);
         z-index: 2;
 
@@ -108,15 +186,15 @@
 
     #card_back_div {
         // display: none;
-        width: 100%;
-        height: 100%;
-        scale: 0.6;
+        width: 80%;
+        height: 80%;
+        scale: 0.65;
         top: -5%;  
-        left: 5%; 
+        left: 10%; 
 
         .cvc_example {
             scale: 1.3;
-            top: 42%;  
+            top: 40%;  
             right: -5%; 
             transform: translate(0%, 50%);
         }
@@ -125,7 +203,7 @@
 
 
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
     #card_back_div {
         #cvc_example {
             scale: 1.2;
@@ -136,19 +214,19 @@
     }
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 500px) {
     #card_front_div {
         #logo {
             scale: 0.8
         }
        .card_number_example {
             scale: 0.8;
-            left: -5%
+            left: -7%
        }
 
        .cardholder_and_exp_date_example {
             scale: 0.9;
-            left: -1%;
+            left: -2%;
             top: 70%;
             justify-content: space-between;
        }
